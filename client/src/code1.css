@@ -1,0 +1,943 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+    /* font-family: 'Crimson Text', serif; */
+    @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    /* font-family: 'Spartan', sans-serif; */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: 0px solid;
+    }
+
+    img {
+      width: 100px;
+    }
+
+    body {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 0.9rem;
+      line-height: 1rem;
+      color: #999;
+      letter-spacing: 0.1px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Noto Serif KR', serif;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      line-height: 1.1rem;
+    }
+
+    h5 {
+      font-size: 0.7rem;
+      line-height: 0.7rem;
+    }
+
+    a:link {
+      color: #000;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #222;
+    }
+
+    a:hover {
+      color: #000;
+    }
+
+    /* a:active {} */
+
+    button {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      padding: 10px 30px;
+      border: 1px solid #ccc;
+      background: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: crimson;
+      color: white;
+      cursor: pointer;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    /***************************start******************************/
+    a.top {
+      position: fixed;
+      right: 5%;
+      bottom: 100px;
+      display: none;
+      font-size: 1.5rem;
+      color: #222;
+      z-index: 99;
+      background: #eee;
+      padding: 5px 10px 10px 10px;
+    }
+
+    main {
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .mi {
+      height: 800px;
+      background: url(https://www.pgclick.com/file_uploads/pg_photos/1000/9tu4n_1582276277.JPG)no-repeat;
+      background-size: cover;
+      background-position: top center;
+    }
+
+    /**
+  .bdiv{
+    height: 300px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    z-index: -1;
+  }
+  **/
+    header {
+      padding: 5rem 0 2.5rem 0;
+    }
+
+    .hd {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      background: none;
+    }
+
+    .hd img {
+      width: 45px;
+      margin: auto 10px;
+    }
+
+    .hd ul li {
+      display: inline-block;
+    }
+
+    .hd a {
+      position: relative;
+      z-index: 99;
+    }
+
+    .hd .logo {
+      font-family: 'Spartan', sans-serif;
+      margin: 0 auto;
+      font-size: 3vw;
+      letter-spacing: 16px;
+      color: #eee8e0;
+      margin-left: 27%;
+      margin-top: 1%;
+    }
+
+    .snsimg {
+      display: none;
+      filter: brightness(250%) grayscale(100) sepia(20%);
+    }
+
+
+    .sp1 {
+      width: 28vw;
+      height: 80px;
+      border-top: 1.5px solid #FFFDF9;
+      border-bottom: 1.5px solid #FFFDF9;
+      display: block;
+      position: absolute;
+      top: 7%;
+      left: 0;
+      z-index: 1;
+    }
+
+    .sp2 {
+      width: 28vw;
+      height: 80px;
+      border-top: 1.5px solid #FFFDF9;
+      border-bottom: 1.5px solid #FFFDF9;
+      display: block;
+      position: absolute;
+      top: 7%;
+      right: 0;
+    }
+
+    nav {
+      width: 1200px;
+      margin: 0 auto;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.2vw;
+    }
+
+    nav ul li {
+      display: inline-block;
+      padding: 0 20px;
+    }
+
+    nav ul li a:after {
+      display: block;
+      content: '';
+      margin-top: 5px;
+      border-bottom: solid 1.5px #DAB88D;
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
+    }
+
+    nav ul li a:link,
+    nav ul li a:visited {
+      color: #2e2d29;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:hover:after {
+      transform: scaleX(1);
+    }
+
+    nav ul li a:after {
+      transform-origin: 0% 50%;
+    }
+
+    .ben {
+      width: 1200px;
+      height: 180px;
+      margin: 0 auto;
+      padding-top: 20px;
+      background: #FEF7EE;
+      text-align: center;
+      position: absolute;
+      bottom: -15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9;
+    }
+
+    .ben h1 {
+      color: #333;
+      font-size: 3rem;
+      margin: 20px auto;
+    }
+
+    .ben h2 {
+      color: #444;
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1.5rem;
+    }
+
+    .at1 {
+      clear: both;
+      text-align: center;
+      padding-bottom: 25rem;
+    }
+
+    .a11 {
+      height: 530px;
+      padding: 10rem 0;
+      background: #FEF7EE;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      line-height: 1.5rem;
+      color: #222;
+      position: relative;
+    }
+
+    .a11 h2 {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .a12 {
+      width: 1200px;
+      margin: 100px auto 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .a12 img {
+      width: 500px;
+    }
+
+    .a12 h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      color: #222;
+      position: absolute;
+      bottom: 20px;
+      left: 55%;
+    }
+
+    .a12 h3 {
+      font-size: 1.1rem;
+      font-weight: 100;
+      color: #333;
+      line-height: 1.8rem;
+      letter-spacing: 0.2px;
+      margin-bottom: 60px;
+      margin-left: 5px;
+    }
+
+    .a12> :last-child {
+      position: absolute;
+      bottom: -55%;
+      left: 52%;
+    }
+
+    .a12 span {
+      width: 1px;
+      height: 250px;
+      display: block;
+      background: #333;
+      position: absolute;
+      bottom: -18%;
+      left: 5%;
+      z-index: -1;
+    }
+
+    .a12 a {
+      padding: 10px 30px;
+      margin: auto 10px;
+      border: 1px solid #E7D9CA;
+      background: #E7D9CA;
+      color: #222;
+      transition: .3s;
+      opacity: .8;
+    }
+
+    .a12 a:hover {
+      background: #E7D9CA;
+      color: #222;
+      opacity: 1;
+    }
+
+    .at2 {
+      clear: both;
+      padding: 10rem 0;
+    }
+
+    .a21 {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .spa21 {
+      width: 400px;
+      height: 1px;
+      background: #222;
+      display: block;
+      margin-top: 15px;
+    }
+
+    .a21 h3 {
+      color: #222;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    .spa22 {
+      width: 400px;
+      height: 1px;
+      background: #222;
+      display: block;
+      margin-top: 15px;
+    }
+
+    .a22 {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.a22 section {
+  width: 350px;
+  height: 300px;
+  margin: 50px 50px 50px 7px;
+  position: relative;
+}
+
+.a22 section span {
+  width: 350px;
+  height: 300px;
+  background: #ebeeeb;
+  display: block;
+}
+
+.a22 section h4 {
+  font-weight: 300;
+  writing-mode: vertical-lr;
+  margin-left: 0;
+  color: #333;
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 15px;
+}
+
+.a22 section img {
+  width: 320px;
+  position: absolute;
+  top: 11%;
+  left: 50px;
+  cursor: pointer;
+  transition: .8s;
+}
+
+.a22 section img:hover {
+  width: 330px;
+}
+
+    .a23 {
+      width: 1200px;
+      padding-top: 50px;
+      margin: 0 auto;
+      color: #222;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .at3 {
+      width: 100%;
+      height: 2150px;
+      background: #FEF7EE;
+      position: relative;
+    }
+
+    .at3 a {
+      padding: 10px 30px;
+      margin: auto 10px;
+      border: 1px solid #E7D9CA;
+      background: #E7D9CA;
+      color: #222;
+      transition: .3s;
+      opacity: .8;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .at3 a:hover {
+      background: #E7D9CA;
+      color: #222;
+      opacity: 1;
+    }
+
+    .a31 {
+      width: 1200px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .a31 span {
+      width: 1px;
+      height: 150px;
+      background: #333;
+      display: block;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    .a31 h3 {
+      color: #222;
+      text-transform: uppercase;
+      font-weight: 300;
+      position: absolute;
+      top: 65%;
+      left: 55%;
+    }
+
+    .a32 {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .a32a {
+      width: 600px;
+      height: 630px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .a32a> :first-child {
+      position: absolute;
+      top: -80px;
+      left: 0;
+    }
+
+    .a32a:hover {
+      background: #fff;
+    }
+
+    .a32a section {
+      margin: 30px auto;
+      margin-left: 50px;
+      margin-right: 150px;
+      display: flex;
+      justify-content: space-between;
+      color: #222;
+    }
+
+    .a32a img {
+      width: 500px;
+      margin: auto 50px;
+    }
+
+    .a32at {
+      width: 380px;
+      margin-right: 50px;
+      float: right;
+      color: #222;
+      line-height: 1.5rem;
+    }
+
+    .a32at h3 {
+      font-weight: 200;
+      line-height: 2rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .a32b {
+      width: 600px;
+      height: 950px;
+      margin-top: 9rem;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .a32b> :first-child {
+      position: absolute;
+      top: -80px;
+      left: 0;
+    }
+
+    .a32b:hover {
+      background: #fff;
+    }
+
+    .a32b section {
+      margin: 30px auto;
+      margin-left: 50px;
+      margin-right: 150px;
+      display: flex;
+      justify-content: space-between;
+      color: #222;
+    }
+
+    .a32b img {
+      width: 500px;
+      margin: auto 50px;
+    }
+
+    .a32bt {
+      width: 380px;
+      margin-right: 50px;
+      float: right;
+      color: #222;
+      line-height: 1.5rem;
+    }
+
+    .a32bt h3 {
+      font-weight: 200;
+      line-height: 2rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .at3 section {
+      position: relative;
+    }
+
+    .a33 {
+      width: 600px;
+      margin: 0 auto;
+      position: absolute;
+      top: 80px;
+      left: 50%;
+    }
+
+    .a33a {
+      width: 600px;
+      height: 950px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .a33a> :first-child {
+      position: absolute;
+      top: -80px;
+      left: 0;
+    }
+
+    .a33a:hover {
+      background: #fff;
+    }
+
+    .a33a section {
+      margin: 30px auto;
+      margin-left: 50px;
+      margin-right: 150px;
+      display: flex;
+      justify-content: space-between;
+      color: #222;
+    }
+
+    .a33a img {
+      width: 500px;
+      margin: auto 50px;
+    }
+
+    .a33at {
+      width: 380px;
+      margin-right: 50px;
+      float: right;
+      color: #222;
+      line-height: 1.5rem;
+    }
+
+    .a33at h3 {
+      font-weight: 200;
+      line-height: 2rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .a33b {
+      width: 600px;
+      height: 549px;
+      margin-top: 9rem;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .a33b> :first-child {
+      position: absolute;
+      top: -80px;
+      left: 0;
+    }
+
+    .a33b:hover {
+      background: #fff;
+    }
+
+    .a33b section {
+      margin: 30px auto;
+      margin-left: 50px;
+      margin-right: 150px;
+      display: flex;
+      justify-content: space-between;
+      color: #222;
+    }
+
+    .a33b img {
+      width: 500px;
+      margin: auto 50px;
+    }
+
+    .a33bt {
+      width: 380px;
+      margin-right: 50px;
+      float: right;
+      color: #222;
+      line-height: 1.5rem;
+    }
+
+    .a33bt h3 {
+      font-weight: 200;
+      line-height: 2rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .at4 {
+      clear: both;
+      width: 100%;
+      height: 100%;
+      padding: 7rem 0;
+      position: relative;
+    }
+
+    .a41 {
+      width: 1200px;
+      height: 650px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .swiper-container {
+      width: 800px;
+      height: 565px;
+      float: left;
+      z-index: -1;
+      position: relative;
+    }
+
+.swiper-button{
+  width: 200px;
+  position: absolute;
+  bottom: 6%;
+  left: 18.5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    filter: grayscale(100);
+}
+
+    .swiper-slide {
+      width: 850px;
+      height: 565px;
+      z-index: -1;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-wrapper> :nth-child(1) {
+      background: url('http://www.wisewedding.co.kr/upFolder/business_partner/partner_2_4.jpg')no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-wrapper> :nth-child(2) {
+      background: url('http://www.wisewedding.co.kr/upFolder/business_partner/partner_12_5.jpg')no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-wrapper> :nth-child(3) {
+      background: url('http://www.wisewedding.co.kr/upFolder/business_partner/partner_9_1.jpg')no-repeat;
+      background-size: cover;
+      background-position: right center;
+    }
+
+    .swiper-wrapper> :nth-child(4) {
+      background: url('http://www.wisewedding.co.kr/upFolder/business_partner/partner_12_12.jpg')no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-wrapper> :nth-child(5) {
+      background: url('http://www.wisewedding.co.kr/upFolder/business_partner/partner_12_13.jpg')no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    .swiper-pagination {
+    padding-bottom: 25px;
+    padding-right: 550px;
+    color: #222;
+    font-size: 1.5rem;
+    }
+
+
+
+    .a41> :last-child {
+      margin-top: 45px;
+      margin-right: 170px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .a41 section h2 {
+      color: #222;
+      font-size: 2rem;
+      font-weight: 300;
+    }
+
+    .a42 {
+      width: 500px;
+      height: 500px;
+      padding: 100px 80px;
+      background: #FEF7EE;
+      color: #444;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 2rem;
+      letter-spacing: 0.3px;
+      text-align: center;
+      position: absolute;
+      bottom: 120px;
+      left: 55.5%;
+      z-index: 9;
+    }
+
+    .a42 h3 {
+      font-size: .8rem;
+      font-weight: 200;
+      color: #333;
+      letter-spacing: normal;
+      margin-bottom: 50px;
+    }
+
+    .a42 a {
+      padding: 5px 30px;
+      margin: auto 10px;
+      border: 1px solid #E7D9CA;
+      background: #E7D9CA;
+      color: #222;
+      transition: .3s;
+      opacity: .8;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 77px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.7em;
+    }
+
+    .a42 a:hover {
+      background: #E7D9CA;
+      color: #222;
+      opacity: 1;
+    }
+
+    .at5 {
+      width: 100%;
+      padding: 5rem 0;
+      border-top: 1px solid #eee;
+    }
+
+    .at5 ul {
+      width: 400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .at5 a {
+      color: #555;
+      text-transform: uppercase;
+      transition: .5s;
+    }
+
+    .at5 a:hover {
+      color: #222;
+    }
+
+
+    footer {
+      height: 330px;
+      background: #eee;
+      padding: 3rem 0;
+    }
+
+    .ft1 {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .ft1 img {
+      width: 400px;
+      margin-top: 85px;
+    }
+
+    .ft1> :nth-child(2)> :nth-child(1) {
+      margin-bottom: 25px;
+    }
+
+    .ft1> :nth-child(2)> :nth-child(1) li {
+      display: inline-block;
+      margin-right: 20px;
+      text-transform: uppercase;
+    }
+
+    .ft1> :nth-child(2)> :nth-child(1) a {
+      color: #555;
+      transition: .5s;
+    }
+
+    .ft1> :nth-child(2) a:hover {
+      color: #222;
+    }
+
+    .ft1> :nth-child(2)> :nth-child(2) li {
+      margin: 10px auto;
+    }
+
+    .ft2 {
+      width: 1200px;
+      height: 80px;
+      margin: 0 auto;
+      text-align: right;
+      position: relative;
+      text-transform: uppercase;
+    }
+
+    .ft2 h4 {
+      width: 497px;
+      margin: 20px auto;
+      font-size: 1rem;
+      font-weight: 500;
+      position: absolute;
+      top: 0;
+      right: 150px;
+    }
+
+    .ft2 ul {
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 0;
+      right: 225px;
+    }
+
+    .ft2 a {
+      color: #777;
+      transition: .5s;
+    }
+
+    .ft2 a:hover {
+      color: #222;
+    }
