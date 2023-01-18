@@ -1,6 +1,7 @@
 import React from "react";
 import '../../assets/images/slider-1.jpg';
-import headerImg from './header.jpg';
+// import headerImg from './header.jpg';
+import headerImg from '../../assets/additional-components/header-img.jpg';
 
 const NavBar = () => {
   return (

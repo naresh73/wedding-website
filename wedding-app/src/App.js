@@ -7,18 +7,20 @@ import Footer from "./Components/Footer/Footer";
 import Gallery from "./Components/Gallery/Gallery";
 import NavBar from "./Components/Navbar/Navbar";
 import OurLove from "./Components/OurLove/OurLove";
+import LoginPage from "./Pages/login";
 
 function App() {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar />
       <Couple />
       <ComingSoon />
       <OurLove />
       <Gallery />
       <Event/>
       <Contact/>
-      <Footer />
+      <Footer /> */}
+      <LoginPage />
       
     </div>
   );
