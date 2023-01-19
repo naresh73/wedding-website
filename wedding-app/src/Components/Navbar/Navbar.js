@@ -6,7 +6,7 @@ import headerImg from '../../assets/additional-components/header-img.jpg';
 const NavBar = () => {
   return (
     <div>
-      <div className="preloader">
+      {/* <div className="preloader">
         <div className="loader">
           <div className="ytp-spinner">
             <div className="ytp-spinner-container">
@@ -21,7 +21,7 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="header_area">
         <div className="header_navbar">

@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import './login.css';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser } from '../redux/auth.slice';
 
 export default function LoginPage() {
+
+
+  const dispatch = useDispatch()
+  
+
+  
 
   const [value, setValue] = useState({
     id : "",
@@ -14,20 +22,23 @@ export default function LoginPage() {
       ...value,
       [e.target.name] : e.target.value
     })
-    console.log(value);
+    // console.log(value);
   }
 
 
   async function login() {
     const res = await axios.post("http://localhost:8001/login", value)
-    alert(res.data.message)
+    // alert(res.data.message)
+    if(res.data.user) {
+      dispatch(loginUser())
+    }
   }
 
   return (
-    <div class="login-div flex-column-centered">
-  <div class="login-comps">
-    <h1 class="text-center">Login</h1>
-    <form class="flex-column-centered">
+    <div className="login-div flex-column-centered">
+  <div className="login-comps">
+    <h1 className="text-center">Login</h1>
+    <form className="flex-column-centered">
       <input type="text" name="id" id="id" placeholder="ID" required 
       value={value.id}
       onChange={handleChange}

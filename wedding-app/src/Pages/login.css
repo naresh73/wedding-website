@@ -13,8 +13,8 @@
     background-position: center;
   }
   .login-div .login-comps {
-    background-image: linear-gradient(rgba(201, 39, 39, 0.5), rgba(0, 0, 0, 0.5));
-    padding: 6em;
+    background-image: linear-gradient(rgba(110, 104, 104, 0.5), rgba(228, 34, 34, 0.5));
+    padding: 3em;
     color: white;
   }
   .login-div form {
