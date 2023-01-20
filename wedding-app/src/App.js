@@ -11,6 +11,7 @@ import OurLove from "./Components/OurLove/OurLove";
 import LoginPage from "./Pages/login";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GallerySection from "./Components/Additional/Sections";
+import UploadButton from "./Components/Additional/UploadButton";
 
 
 function App() {
@@ -20,20 +21,21 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route exact path="/" element={
-          (isLoggedIn) ? 
-          <div>
-          <NavBar />
-          <Couple />
-          <ComingSoon />
-          <OurLove />
-          <Gallery />
-          <GallerySection />
-          <Event/>
-          <Contact/>
-          <Footer /> 
-          </div>
-          :
-          <LoginPage />
+          // (isLoggedIn) ? 
+          // <div>
+          // <NavBar />
+          // <Couple />
+          // <ComingSoon />
+          // <OurLove />
+          // <Gallery />
+          // <GallerySection />
+          <UploadButton />
+          // <Event/>
+          // <Contact/>
+          // <Footer /> 
+          // </div>
+          // :
+          // <LoginPage />
 
       } />
     </Routes>
