@@ -56,10 +56,12 @@ const getImgs = async (req, res) => {
 }
 
 const uploadImg = async (req, res) => {
+    const type = req.body.type
     const imageUrl = req.file.path
-    console.log(req.file, req.body, 16)   ;
+    console.log(req.file, req.body, 16);
     try {
         const newImg = new postModel({
+            type : type,
             imageUrl : imageUrl
         })
         const success = await newImg.save();

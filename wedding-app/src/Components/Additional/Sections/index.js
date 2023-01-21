@@ -1,16 +1,32 @@
 import React, { useState } from 'react';
 import Photos from '../Gallery';
-import Images from './images';
+import data from './images';
+import axios from 'axios';
 
 
 export default function GallerySection() {
-    const [items, setItems] = useState(Images);
+    const [data, setData] = useState([])
+    const [sectionData, setSectionData] = useState([])
     const filterItem = (categItem) => {
-        const updatedItems = Images.filter((curElem) => {
-            return curElem.event === categItem;
+        const updatedItems = sectionData.filter((curElem) => {
+            return curElem.type === categItem;
         });
-        setItems(updatedItems);
+        setData(updatedItems);
     }
+
+
+  async function getAllImages() {
+    await axios.get('http://localhost:8001/images')
+    .then(res => {
+        console.log(res.data.data); 
+        setSectionData(res.data.data)
+        setData(res.data.data)
+        // console.log(data)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
     return (
         <div>
             <div className="section_title text-center pb-30">
@@ -18,7 +34,10 @@ export default function GallerySection() {
                 <h3 className="title">Gallery</h3>
                 <img src="assets/images/section_shape.png" alt="Shape" />
               </div>
+              <span style={{ fontSize : "40px",  fontWeight : 'bold' ,content: "21A1" }} >&#8650; </span>
+              <hr style={{ color : 'black', backgroundColor : 'black', height : "10px" }} ></hr>
               <div className="section_title text-center pb-30"></div>
+                <button type='button' onClick={getAllImages} >See data</button>
               <div className="section_title text-center pb-30"></div>
               <div className="section_title text-center pb-30"></div>
             
@@ -50,7 +69,7 @@ export default function GallerySection() {
                     <img src="assets/images/section_shape.png" alt="Shape" />
                 </div>
                 <div className="section_tsitle text-center pb-30">
-                    <div className="title" onClick={() => setItems(Images)}>All</div>
+                    <div className="title" onClick={() => setData(sectionData)}>All</div>
                     <img src="assets/images/section_shape.png" alt="Shape" />
                 </div>
                     
@@ -59,10 +78,10 @@ export default function GallerySection() {
                     {/* <button className="btn btn-warning" onClick={() => filterItem('haldi')}>Haldi</button> */}
                     {/* <button className="btn btn-warning" onClick={() => filterItem('mehndi')}>Mehndi</button> */}
                     {/* <button className="btn btn-warning" onClick={() => filterItem('wedding')/}>Wedding</button> */}
-                    {/* <button className="btn btn-warning" onClick={() => setItems(Images)}>All</button> */}
+                    {/* <button className="btn btn-warning" onClick={() => setItems(data)}>All</button> */}
                 </div>
             </div>
-            <Photos data={items} />
+            <Photos data={data} />
         </div >
     )
 }

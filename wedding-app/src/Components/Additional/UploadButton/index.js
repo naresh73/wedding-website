@@ -1,72 +1,74 @@
 import './uploadButton.css';
-import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import axios from 'axios';
+import downCloud from './downCloud.png';
+
 
 export default function UploadButton() {
+    const [type, setType] = useState("")
     const [image, setImage] = useState()
-    const [data, setData] = useState([])
-    
+
     async function PostImages() {
-        console.log(image);
         const formData = new FormData();
-        formData.append('image', image)    
-
+        formData.append('type', type)    
+        formData.append('image', image) 
         await axios.post('http://localhost:8001/uploads', formData)
+        setType("")
+        setImage("")
+        
     }
 
-    async function getAllImages() {
-        await axios.get('http://localhost:8001/images')
-        .then(res => {
-            console.log(res.data); 
-            setData(res.data.data)
-            console.log(data)
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    }
-
-  return (
-    <div className="container">
-                <div className="row">
-                    <form>
-                        <h3>React File Upload</h3>
-                        <div className="form-group">
-                            <input 
-                            // multiple
-                            type="file" 
-                            name='myFile'
-                            accept='.jpeg, .JPG, .png'
-                            onChange={(e) => setImage(e.target.files[0])}
-                            />
-                        </div>
-                        <div className="form-group">
-                            <button className="btn btn-primary" type="button"
-                            onClick={PostImages}
-                            >Upload</button>
-                        </div>
-                    </form>
-                </div>
-                
-                <div className='flex'>
-                <button type='button' 
-                        onClick={getAllImages}
-                    >
-                        See Images
-                    </button>
-                    {
-                        data.map((serviceItem, serviceIndex) => {
-                            return (
-                                <div key={serviceIndex + 1} className="card">
-                                    <img src={`http://localhost:8001/${serviceItem?.imageUrl}`} />
-                                    { console.log(`http://localhost:8001/${serviceItem?.imageUrl}`)}
-                                </div>
-                            )
-                        })
-                    }
-
-                </div>
-            </div>
-  )
+    return (
+        <div className="container">
+                    <div className="conatiner">
+                        <form>
+                            <h3>Please upload photo</h3>
+                            <hr></hr>
+                            <div className='container'>
+                                <span style={{ paddingRight : "20px" }}>Type of Event :</span>
+                                {/* <input
+                                // multiple
+                                type="text" 
+                                name='myType'
+                                placeholder=' mehandi/haldi/wedding'
+                                value={type}
+                                onChange={(e) => setType(e.target.value)}
+                                /> */}
+                                <select value={type} onChange={(e) => setType(e.target.value)} >
+                                    <option></option>
+                                    <option>tilak</option>
+                                    <option>jodhpur</option>
+                                    <option>baarat</option>
+                                    <option>haldi</option>
+                                    <option>mehandi</option>
+                                    <option>wedding</option>
+                                </select>
+                            </div>
+                            <hr></hr>
+                            <div className="fordm-group">
+                                <label htmlFor='img' id='label'>
+                                <input
+                                // multiple
+                                id='img'
+                                type="file" 
+                                name='myFile'
+                                accept='.jpeg, .JPG, .png'
+                                onChange={(e) => setImage(e.target.files[0])}
+                                />{
+                                    (image) ? image.name : <div><img src={downCloud} />
+                                    <p>CLICK HERE</p>
+                                    </div>
+                                }
+                                </label>
+                                
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary" type="button"
+                                onClick={PostImages}
+                                >Upload</button>
+                            </div>
+                        </form>
+                    </div>
+        </div>
+    )
 }
