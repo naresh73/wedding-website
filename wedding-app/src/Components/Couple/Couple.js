@@ -33,30 +33,26 @@ const Couple = () => {
                   />
                   <h4 className="couple_name">Siddharth</h4>
                   <p>
-                    Hi I am Siddharth, dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries.
+                    Hi I am Siddharth,
                   </p>
                   <ul className="social">
                     <li>
-                      <a href="/">
+                      <a href="#">
                         <i className="lni lni-facebook-filled"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="#">
                         <i className="lni lni-twitter-original"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="#">
                         <i className="lni lni-instagram-original"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="#">
                         <i className="lni lni-linkedin-original"></i>
                       </a>
                     </li>
@@ -81,30 +77,26 @@ const Couple = () => {
                   />
                   <h4 className="couple_name">Anupriya</h4>
                   <p>
-                    Hi I am Anupriya, dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries.
+                    Hi I am Anupriya,
                   </p>
                   <ul className="social">
                     <li>
-                      <a href="/">
+                      <a href="#">
                         <i className="lni lni-facebook-filled"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="#">
                         <i className="lni lni-twitter-original"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="#">
                         <i className="lni lni-instagram-original"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="#">
                         <i className="lni lni-linkedin-original"></i>
                       </a>
                     </li>

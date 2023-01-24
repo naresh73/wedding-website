@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import './showhide.css';
+import React, { useState } from 'react';
+import './gallery.css';
 import { Icon } from 'react-icons-kit';
 import { arrow_down } from 'react-icons-kit/ikons/arrow_down';
 import { arrow_up } from 'react-icons-kit/ikons/arrow_up';
-import Photos from '../Gallery';
 import axios from 'axios';
 import UploadButton from '../UploadButton';
+import Card from './card';
 
-export default function ShowHideGallery() {
+export default function Gallery() {
     const [type, setType] = useState('hide');
     const [icon, setIcon] = useState(arrow_down);
+    const [data, setData] = useState([])
+    const [sectionData, setSectionData] = useState([])
 
     function togglePasswordVisibility() {
         getAllImages()
@@ -23,8 +25,6 @@ export default function ShowHideGallery() {
         }
     }
 
-    const [data, setData] = useState([])
-    const [sectionData, setSectionData] = useState([])
     const filterItem = (categItem) => {
         const updatedItems = sectionData.filter((curElem) => {
             return curElem.type === categItem;
@@ -45,13 +45,11 @@ export default function ShowHideGallery() {
             })
     }
 
-    useEffect(() => {
-        getAllImages()
-    },[])
-
     return (
         <div>
-            <section id="gallery" className="coming_soon_area pt-20 pb-70">
+            <section className="our_love_area pt-120"></section>
+            <section id="gallery" className="our_love_area pt-120"></section>
+            <section className="coming_soon_area pt-20 pb-70">
                 <div className="coming_soon_shape_1">
                     <img src="assets/images/shape-1.png" alt="shape" />
                 </div>
@@ -62,15 +60,17 @@ export default function ShowHideGallery() {
                         <h3 className="title">Gallery</h3>
                         <img src="assets/images/section_shape.png" alt="Shape" />
                     </div>
+                    
+                        <div className='conaitner'>
                     <Icon id='icons' onClick={togglePasswordVisibility} icon={icon} />
+                    </div>
+                    
                     <hr className='hr' ></hr>
                 </div>
 
                 <div className="coming_soon_shape_2">
                     <img src="assets/images/shape-2.png" alt="shape" />
                 </div>
-            
-
             {
                 type === 'show' ?
                     <div>
@@ -81,7 +81,7 @@ export default function ShowHideGallery() {
                                     <img src="assets/images/section_shape.png" alt="Shape" />
                                 </div>
                                 <div className="section_tsitle text-center pb-30">
-                                    <div className="title" onClick={() => filterItem('ff')}>Family function</div>
+                                    <div className="title" onClick={() => filterItem('jodhpur')}>Jodhpur</div>
                                     <img src="assets/images/section_shape.png" alt="Shape" />
                                 </div>
                                 <div className="section_tsitle text-center pb-30">
@@ -93,7 +93,7 @@ export default function ShowHideGallery() {
                                     <img src="assets/images/section_shape.png" alt="Shape" />
                                 </div>
                                 <div className="section_tsitle text-center pb-30">
-                                    <div className="title" onClick={() => filterItem('mehandi')}>Mehandi</div>
+                                    <div className="title" onClick={() => filterItem('mehndi')}>Mehndi</div>
                                     <img src="assets/images/section_shape.png" alt="Shape" />
                                 </div>
                                 <div className="section_tsitle text-center pb-30">
@@ -106,7 +106,7 @@ export default function ShowHideGallery() {
                                 </div>
                             </div>
                         </div>
-                        <Photos data={data} />
+                        <Card data={data} />
                     </div >
 
                     :

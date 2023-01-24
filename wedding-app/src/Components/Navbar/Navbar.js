@@ -6,30 +6,13 @@ import headerImg from '../../assets/additional-components/header-img.jpg';
 const NavBar = () => {
   return (
     <div>
-      {/* <div className="preloader">
-        <div className="loader">
-          <div className="ytp-spinner">
-            <div className="ytp-spinner-container">
-              <div className="ytp-spinner-rotator">
-                <div className="ytp-spinner-left">
-                  <div className="ytp-spinner-circle"></div>
-                </div>
-                <div className="ytp-spinner-right">
-                  <div className="ytp-spinner-circle"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="header_area">
         <div className="header_navbar">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <nav className="navbar navbar-expand-lg">
-                  <a className="navbar-brand" href="index.html">
+                  <a className="navbar-brand" href="#">
                     <img src="assets/images/logo.png" alt="Logo" />
                   </a>
                   <button
@@ -51,7 +34,7 @@ const NavBar = () => {
                     id="navbarSupportedContent"
                   >
                     <ul id="nav" className="navbar-nav ml-auto">
-                      <li className="nav-item active">
+                      <li className="nav-item">
                         <a className="page-scroll" href="#home">
                           Home
                         </a>
@@ -62,8 +45,8 @@ const NavBar = () => {
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll" href="#our_love">
-                          Story
+                        <a className="page-scroll" href="#event">
+                          Events
                         </a>
                       </li>
                       <li className="nav-item">
@@ -72,13 +55,8 @@ const NavBar = () => {
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="page-scroll" href="#event">
-                          Event
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="page-scroll" href="#contact">
-                          RSVP
+                        <a className="page-scroll" href="#upload-photo">
+                          Upload-Photo
                         </a>
                       </li>
                     </ul>
@@ -119,11 +97,11 @@ const NavBar = () => {
                       data-animation="fadeInUp"
                       data-delay="1s"
                     >
-                      The Big Town Hall, Mumbai
+                      The Big Town Hall, Kanpur
                     </span>
                     <p data-animation="fadeInUp" data-delay="1.4s">
                       <img src="assets/images/header-shape-1.png" alt="" />
-                      16 Febuary 2023
+                      14 Febuary 2023
                       <img src="assets/images/header-shape-2.png" alt="" />
                     </p>
                   </div>

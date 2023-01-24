@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer_widget pt-80 pb-80 text-center">
             <div className="footer_logo">
-              <a href="/">
+              <a href="#">
                 <img src="assets/images/logo-2.png" alt="logo" />
               </a>
             </div>
@@ -22,22 +22,19 @@ const Footer = () => {
             </div>
             <ul className="footer_menu">
               <li>
-                <a href="/">Home</a>
+                <a href="#home">Home</a>
               </li>
               <li>
-                <a href="/">Couple</a>
+                <a href="#couple">Couple</a>
               </li>
               <li>
-                <a href="/">Story</a>
+                <a href="#event">Event</a>
               </li>
               <li>
-                <a href="/">Gallery</a>
+                <a href="#gallery">Gallery</a>
               </li>
               <li>
-                <a href="/">Event</a>
-              </li>
-              <li>
-                <a href="/">RSVP</a>
+                <a href="#upload-photo">Upoad-Photo</a>
               </li>
             </ul>
           </div>
@@ -45,7 +42,7 @@ const Footer = () => {
             <p>
               Designed and Developed by{" "}
               <a
-                href="https://uideck.com"
+                href="#"
                 style={{ color: "#D59A57" }}
                 rel="nofollow"
               >
@@ -55,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <a href="#home" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+      <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
     </div>
   );
 };

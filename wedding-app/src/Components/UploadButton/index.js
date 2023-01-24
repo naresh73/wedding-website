@@ -15,32 +15,23 @@ export default function UploadButton() {
         await axios.post('http://localhost:8001/uploads', formData)
         setType("")
         setImage("")
-        
     }
 
     return (
-        <div className="container">
+        <div id='upload-photo' className='cont'>
+        <div className="container" >
                     <div className="conatiner">
                         <form>
-                            <h3>Please upload photo</h3>
                             <hr></hr>
                             <div className='container'>
                                 <span style={{ paddingRight : "20px" }}>Type of Event :</span>
-                                {/* <input
-                                // multiple
-                                type="text" 
-                                name='myType'
-                                placeholder=' mehandi/haldi/wedding'
-                                value={type}
-                                onChange={(e) => setType(e.target.value)}
-                                /> */}
                                 <select value={type} onChange={(e) => setType(e.target.value)} >
                                     <option></option>
                                     <option>tilak</option>
                                     <option>jodhpur</option>
                                     <option>baarat</option>
                                     <option>haldi</option>
-                                    <option>mehandi</option>
+                                    <option>mehndi</option>
                                     <option>wedding</option>
                                 </select>
                             </div>
@@ -55,7 +46,7 @@ export default function UploadButton() {
                                 accept='.jpeg, .JPG, .png'
                                 onChange={(e) => setImage(e.target.files[0])}
                                 />{
-                                    (image) ? image.name : <div><img src={downCloud} />
+                                    (image) ? image.name : <div><img src={downCloud} alt="file" />
                                     <p>CLICK HERE</p>
                                     </div>
                                 }
@@ -69,6 +60,7 @@ export default function UploadButton() {
                             </div>
                         </form>
                     </div>
+        </div>
         </div>
     )
 }

@@ -1,0 +1,27 @@
+.hr {
+  background-color: rgba(234, 145, 36, 0.703);
+  height: 5px;
+  border-radius: 20px;
+}
+
+#icons {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 50%;
+}
+
+
+
+.title {
+  font-size: 20px;
+  
+  color: rgb(52, 49, 49);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.title:hover{
+  color: rgb(255, 147, 23); 
+}

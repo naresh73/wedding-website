@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import './login.css';
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { loginUser } from '../redux/auth.slice';
 
 export default function LoginPage() {
-
-
   const dispatch = useDispatch()
-  
-
-  
-
   const [value, setValue] = useState({
     id : "",
     password : ""
@@ -22,13 +16,11 @@ export default function LoginPage() {
       ...value,
       [e.target.name] : e.target.value
     })
-    // console.log(value);
   }
 
 
   async function login() {
     const res = await axios.post("http://localhost:8001/login", value)
-    // alert(res.data.message)
     if(res.data.user) {
       dispatch(loginUser())
     }
