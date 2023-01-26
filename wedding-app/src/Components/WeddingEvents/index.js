@@ -5,6 +5,7 @@ import haldiPic from '../../assets/pictures/haldiPic.jpg';
 import djPic from '../../assets/pictures/djPic.jpg';
 import weddingPic from '../../assets/pictures/weddingPic.jpg';
 import receptioPic from '../../assets/pictures/receptionPic.jpeg';
+import tilakPic from '../../assets/pictures/tilakPic.jpeg';
 import firstDate from '../../assets/pictures/firstDate.jpg';
 import living from '../../assets/pictures/living.png';
 
@@ -22,6 +23,32 @@ const WeddingEvents = () => {
             </div>
           </div>
           <div className="love_wrapper">
+            
+          <div className="single_love d-flex flex-wrap align-items-center">
+              <div
+                className="love_content text-lg-right wow fadeInRightBig"
+                data-wow-duration="1.3s"
+                data-wow-delay="0.4s"
+              >
+                <h3 className="love_title">Tilak</h3>
+                <p>
+                The tilak ceremony is a small ceremony with a lovely symbolism attached to it. The father of the bride and her male relatives perform this ceremony at a propitious muhurat, generally during the day. To ensure that their daughter’s happiness. Tilak is a symbol of prosperity and ensures the well-being of the couple.
+                </p>
+              </div>
+              <div className="love_date">
+                <p>
+                  <i className="lni lni-heart-filled"></i>10am 5 Feb 23
+                </p>
+              </div>
+              <div
+                className="love_image wow fadeInLeftBig"
+                data-wow-duration="1.3s"
+                data-wow-delay="0.4s"
+              >
+                <img src={tilakPic} alt="love" />
+              </div>
+            </div>
+
             <div className="single_love d-flex flex-wrap align-items-center">
               <div
                 className="love_content order-md-last wow fadeInLeftBig"
@@ -119,31 +146,6 @@ const WeddingEvents = () => {
                 data-wow-delay="0.4s"
               >
                 <img src={weddingPic} alt="love" />
-              </div>
-            </div>
-
-            <div className="single_love d-flex flex-wrap align-items-center">
-              <div
-                className="love_content order-md-last wow fadeInLeftBig"
-                data-wow-duration="1.3s"
-                data-wow-delay="0.4s"
-              >
-                <h3 className="love_title">Reception</h3>
-                <p>
-                "Your wedding day may come and go, but may your love forever grow. Congratulations to the perfect couple!" "You'll always remember this day. Hope it's even more beautiful and perfect than you've been dreaming, and hope it's just the start of a lifetime that just gets better and better."
-                </p>
-              </div>
-              <div className="love_date">
-                <p>
-                  <i className="lni lni-heart-filled"></i>8pm 15 Feb 22
-                </p>
-              </div>
-              <div
-                className="love_image order-md-first wow fadeInRightBig"
-                data-wow-duration="1.3s"
-                data-wow-delay="0.4s"
-              >
-                <img src={receptioPic} alt="love" />
               </div>
             </div>
           </div>
