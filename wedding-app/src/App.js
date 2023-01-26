@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route exact path="/" element={
-          // (isLoggedIn) ? 
+          (isLoggedIn) ? 
           <div>
           <NavBar />
           <Couple />
@@ -23,8 +23,8 @@ function App() {
           <Gallery />
           <Footer /> 
           </div>
-          // :
-          // <LoginPage />
+          :
+          <LoginPage />
 
       } />
     </Routes>
