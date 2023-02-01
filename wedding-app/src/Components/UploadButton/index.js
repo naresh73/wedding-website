@@ -18,7 +18,14 @@ export default function UploadButton() {
     }
 
     return (
+        
+        
         <div id='upload-photo' className='cont'>
+            <div className="section_title text-center pb-30">
+                        <div className="section_title text-center pb-30"></div>
+                        <h3 className="title">Upload-Photo</h3>
+                        <img src="assets/images/section_shape.png" alt="Shape" />
+                    </div>
         <div className="container" >
                     <div className="conatiner">
                         <form>
@@ -54,7 +61,7 @@ export default function UploadButton() {
                                 
                             </div>
                             <div className="form-group">
-                                <button className="btn btn-primary" type="button"
+                                <button className="btnn title" type="button"
                                 onClick={PostImages}
                                 >Upload</button>
                             </div>
@@ -62,5 +69,6 @@ export default function UploadButton() {
                     </div>
         </div>
         </div>
+        
     )
 }

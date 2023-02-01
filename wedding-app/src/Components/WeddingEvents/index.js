@@ -4,10 +4,10 @@ import mehndiPic from '../../assets/pictures/mehndiPic.jpg';
 import haldiPic from '../../assets/pictures/haldiPic.jpg';
 import djPic from '../../assets/pictures/djPic.jpg';
 import weddingPic from '../../assets/pictures/weddingPic.jpg';
-import receptioPic from '../../assets/pictures/receptionPic.jpeg';
+// import receptioPic from '../../assets/pictures/receptionPic.jpeg';
 import tilakPic from '../../assets/pictures/tilakPic.jpeg';
-import firstDate from '../../assets/pictures/firstDate.jpg';
-import living from '../../assets/pictures/living.png';
+// import firstDate from '../../assets/pictures/firstDate.jpg';
+// import living from '../../assets/pictures/living.png';
 
 const WeddingEvents = () => {
   return (
